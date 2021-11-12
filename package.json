@@ -1,0 +1,25 @@
+{
+  "name": "ex-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "faker": "^5.5.3",
+    "jest": "^27.3.1",
+    "mocha": "^9.1.3",
+    "supertest": "^6.1.6"
+  }
+}

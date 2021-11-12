@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "919d971a-3dbe-4b94-aa4a-ffedbdf7cf06",
+		"name": "waveweb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/authors?per_page=5&page=2&order=name&sort=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors"
+					],
+					"query": [
+						{
+							"key": "per_page",
+							"value": "5"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "order",
+							"value": "name"
+						},
+						{
+							"key": "sort",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"teste\",\n    \"author_name\": \"Teste\",\n    \"author_id\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http:/localhost:3000/articles",
+					"host": [
+						"http"
+					],
+					"port": "",
+					"path": [
+						"localhost:3000",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Articles",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"article\": [\n        {\n            \"id\": 1,\n            \"title\": \"teste\",\n            \"author_id\": 5,\n            \"author_name\": null\n        },\n        {\n            \"id\": 2,\n            \"title\": \"teste\",\n            \"author_id\": 1,\n            \"author_name\": null\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Articles",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"article\": [1, 2, 3]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
